@@ -1,0 +1,9 @@
+version 15.0.0.1==> Solved min_quantity field view issue.
+
+version 15.0.0.2==> Update French language translation.
+
+version 15.0.0.3 (21/12/2022)==> Update report action based on standard v15 report action.
+								 Improved domain for get only storable product.
+
+version 15.0.0.4 (17/05/2023)==> issue fixed for On hand qty with product and product variants, and with Global for all product, Individual for all products, Reorder Rules.
+

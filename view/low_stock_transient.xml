@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Low stock transient -->
+        <record id="low_stock_transient_tree_view" model="ir.ui.view">
+            <field name="name">low_stock_transient_tree_view</field>
+            <field name="model">low.stock.transient</field>
+            <field name="arch" type="xml">
+                <tree create="0" edit="0">
+                    <field name="name"  string="Nombre del producto"/>
+                    <field name="limit_quantity" string="Cantidad mínima" />
+                    <field name="stock_quantity" string="Cantidad de producto" />
+                    <field name="required_quantity" string="Cantidad requerida" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="low_stock_transient_action" model="ir.actions.act_window">
+            <field name="name">Informe de stock bajo del producto</field>
+            <field name="res_model">low.stock.transient</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="low_stock_transient_tree_view" />
+        </record>
+
+
+        <menuitem id="menu_low_stock" name="Productos Minimos"
+            parent="stock.menu_warehouse_report" sequence="100"
+            action="low_stock_transient_action" />
+    </data>
+</openerp>
